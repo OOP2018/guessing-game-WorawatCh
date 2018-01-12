@@ -34,7 +34,7 @@ public class WorawatGame extends NumberGame {
 		long seed = System.nanoTime( );
 		Random rand = new Random( seed );
 		// get a random number between 0 and 9. Add 1 so the value is 1 - 10.
-		int value = rand.nextInt(10) + 1;
+		int value = rand.nextInt(100) + 1;
 		return value;
 	}
 
