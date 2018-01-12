@@ -9,6 +9,7 @@ public class WorawatGame extends NumberGame {
 	/* properties of a guessing game */
 	private int upperBound;
 	private int secret;
+	private int count;
 
 	public WorawatGame(int upperBound) {
 		this.upperBound = upperBound;
@@ -17,6 +18,7 @@ public class WorawatGame extends NumberGame {
 	}
 
 	public boolean guess(int number) {
+		count++;
 		if (number == secret) {
 			setMessage("Right! The secret number is " + secret);
 			return true;
@@ -42,5 +44,9 @@ public class WorawatGame extends NumberGame {
 
 	public String toString() {
 		return "Try to guess a number.";
+	}
+	
+	public int getCount(){
+		return count;
 	}
 }
