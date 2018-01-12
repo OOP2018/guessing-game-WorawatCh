@@ -16,16 +16,21 @@ public class GameSolver {
  */
  public int play(NumberGame game) {
 	    boolean correct = false;
-		int guessNumber = 0;
-		int upperBound = game.getUpperBound();
+	    String check = "Sorry, too small.";
+	    String check2 = "Sorry, too large.";
+	    int constant = 2;
+	    int fiftyConstant = 50;
+		int guessNumber = game.getUpperBound()/2;
 		while(!correct){
-			guessNumber = upperBound/2;
-			if(guessNumber==upperBound) correct=game.guess(guessNumber);
-			else if(guessNumber<upperBound){
-				 correct=game.guess(guessNumber+guessNumber/2);
-			} else if(guessNumber>upperBound){
-				 correct=game.guess(guessNumber-guessNumber/2);
+			System.out.println(guessNumber);
+			correct = game.guess(guessNumber);
+		    if(game.getMessage()==check){
+			     guessNumber=guessNumber+fiftyConstant/(constant);
 			}
+			else if(game.getMessage()==check2){
+			     guessNumber=guessNumber-fiftyConstant/(constant);
+			}
+		    constant=constant*2;
 		}
 		return guessNumber;
 	}
