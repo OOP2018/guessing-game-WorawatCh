@@ -12,7 +12,7 @@ public class GameSolver {
  * solution.
  *
  * @param game is the NumberGame to solve
- * @return //TODO what does it return?
+ * @return final number which gamesolver do 
  */
  public int play(NumberGame game) {
 	    boolean correct = false;
