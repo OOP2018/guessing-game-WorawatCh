@@ -49,6 +49,7 @@ public class NumberGame {
 	/** 
 	 * Get the largest possible value of the solution for this game. 
 	 * For a guessing game, this should be the upper bound of secret.
+	 * @return upperBound
 	 */
 	public int getUpperBound() {
 		return Integer.MAX_VALUE;  // not very helpful :-)
@@ -63,6 +64,12 @@ public class NumberGame {
 		return "You should override this method for your game";
     }
 	
+	/**
+	 * 
+	 * To count how many time that player played
+	 * @return count
+	 * 
+	 */
 	public int getCount() {
 		return 0;
 	}
