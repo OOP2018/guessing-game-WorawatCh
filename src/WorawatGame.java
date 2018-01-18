@@ -1,7 +1,7 @@
 import java.util.Random; // for generating random numbers
 
 /**
- * Game of guessing a secret number. Form 1 to 100 you have to guess what secret number is
+ * Game of guessing a secret number. Form 1 to upperbound you have to guess what secret number is
  * 
  * @author Worawat Chueajedton
  */
@@ -16,7 +16,7 @@ public class WorawatGame extends NumberGame {
 	public WorawatGame(int upperBound) {
 		this.upperBound = upperBound;
 		this.secret = getRandomnumber(upperBound);
-		setMessage("I'm thinking of a number between 1 and 100");
+		setMessage("I'm thinking of a number between 1 and "+ upperBound);
 	}
 	
 	/**
@@ -49,7 +49,7 @@ public class WorawatGame extends NumberGame {
 		long seed = System.nanoTime( );
 		Random rand = new Random( seed );
 		// get a random number between 0 and 9. Add 1 so the value is 1 - 10.
-		int value = rand.nextInt(100) + 1;
+		int value = rand.nextInt(upperBound) + 1;
 		return value;
 	}
 
