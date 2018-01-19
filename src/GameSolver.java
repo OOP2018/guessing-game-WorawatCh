@@ -22,7 +22,6 @@ public class GameSolver {
 		int max = game.getUpperBound();
 		int guessNumber = min + (max - min) / 2;
 		while (!correct) {
-			System.out.println(guessNumber);
 			correct = game.guess(guessNumber);
 
 			if (game.getMessage().contains("too small")) {

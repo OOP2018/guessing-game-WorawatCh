@@ -15,7 +15,7 @@ public class Main {
 		int amount = game.getCount();
 		//System.out.println("play() returned "+solution);
 		System.out.println("Amount of your guess "+ amount);
-		System.out.println("Ai said the secret number is "+aiSolution);
+		System.out.println("GameSolver said the secret number is "+aiSolution);
 		
 	}
 }
